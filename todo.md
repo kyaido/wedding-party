@@ -39,9 +39,23 @@
 * 
 * 
 * 
-* 
-* 
-* 
-* 
-* 
-* 
+
+### google app script
+
+http://shirokuma.hatenadiary.com/entry/2014/09/07/224611
+http://www.yamamanx.com/gas-gmail-parse/
+
+#### googleform
+
+埋め込みじゃデザインほぼいじれない
+フォームに飛ばせば少しはいじれる
+簡単
+自動返信みたいなことも他と比べれば簡単
+アドレス取得したほうがよさそう
+
+
+#### formspree
+
+デザインが自由自在
+メール飛ばして解析してスプレッドシートに追記させてその内容解析して返信させる
+アドレス取得したほうがよさそう
