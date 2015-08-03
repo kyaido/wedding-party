@@ -54,6 +54,13 @@ http://www.yamamanx.com/gas-gmail-parse/
 自動返信みたいなことも他と比べれば簡単
 レスポンシブー、できなくはないけどあれだなーiframe内でのスクロールがやっかいだな、埋め込みは微妙かもなー
 アドレス取得したほうがよさそう
+http://liapoc.com/google/googelform.html
+http://liapoc.com/google/googelform2.html
+http://chaika.hatenablog.com/entry/2014/11/04/063530
+自動返信はしたい
+これ参考にして作った
+http://ascii.jp/elem/000/000/879/879412/
+回答のシートに追記しても保たれてるので色々追記しちゃおう
 
 
 #### formspree
