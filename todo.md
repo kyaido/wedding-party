@@ -39,8 +39,7 @@
 * 対象デバイス選定
 * 表示検証
 * ソースになんか仕込む
-* enjoy.the.wedding.party
-* wedding.party.10.17
+* wedding.party.10.17@gmail.com
 * 
 * 
 

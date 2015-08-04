@@ -49,7 +49,7 @@ function submitForm(e){
                  + '\n'
                  + '▼パーティ詳細はこちらをご覧ください\n'
                  + 'https://xxx\n';
-  GmailApp.sendEmail(mail, title2, content2);
+  GmailApp.sendEmail(mail, title2, content2, { from: 'wedding.party.10.17@gmail.com' });
 }
 
 // TODO
