@@ -8,23 +8,13 @@
 
 
 body {
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  line-height: 1.7;
-  color: #333;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  color: $base-font-color;
 }
-a:link {
-  color: #333;
-  text-decoration: none;
-}
-a:visited {
-  color: #333;
-  text-decoration: none;
-}
-a:hover,
-a:active,
-a:focus {
-  color: #333;
+a {
+  color: $base-link-color;
   text-decoration: none;
 }
 
@@ -33,4 +23,14 @@ label {
 }
 img {
   vertical-align: middle;
+}
+
+@font-face{ 
+  font-family: "ayuccoro";
+  src: url("../fonts/ayuccoro/ayuccoro.eot");
+  src: url("../fonts/ayuccoro/ayuccoro.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/ayuccoro/ayuccoro.woff") format("woff"),
+       url("../fonts/ayuccoro/ayuccoro.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }

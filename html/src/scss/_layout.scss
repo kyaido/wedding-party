@@ -11,7 +11,7 @@
 ------------------------------------- */
 body {
 }
-#wrapper {
+.wrapper {
 }
 
 
@@ -19,41 +19,139 @@ body {
 /* -------------------------------------
  * header
 ------------------------------------- */
-#header {
+.header {
   clear: both;
   width: 100%;
+  min-height: 100vh;
+  padding: 80px 0;
+  box-sizing: border-box;
+  background: url(../img/pic_header_01.jpg) no-repeat 50% 100% / cover;
 }
-#headInner {
-  width: $contentsWidth;
+.header__inner {
+  width: 100%;
+  max-width: $contents-max-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* logo */
 .logo {
-}
-
-
-
-/* -------------------------------------
- * nav
-------------------------------------- */
-#nav {
-  clear: both;
+  color: #fff;
+  font-family: $ayuccoro-font-family;
+  font-size: 80px;
+  text-align: center;
+  line-height: 1;
 }
 
 
 /* -------------------------------------
  * main
 ------------------------------------- */
-/* content */
-#content {
+/* main */
+.main {
   clear: both;
   width: 100%;
 }
 
-/* main */
-#main {
+
+/* section */
+.section {
+  clear: both;
   width: 100%;
+  padding: 60px 0 80px;
+}
+.section__inner {
+  width: 100%;
+  max-width: $contents-max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.section__heading {
+  position: relative;
+  font-family: $ayuccoro-font-family;
+  font-size: 80px;
+  text-align: center;
+  line-height: 1;
+}
+.section__text {
+  margin-top: 40px;
+  text-align: center;
+  line-height: 2;
+}
+.section__image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+/* button */
+.button {
+  margin-top: 40px;
+  text-align: center;
+}
+.button__trigger {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  background-color: lightgreen;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0 rgba(#000, .3);
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+/* greeting */
+.greeting {
+}
+
+
+/* invitation */
+.invitation {
+  background-color: $section-color;
+}
+.detail {
+  display: table;
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto 0;
+}
+.detail__row {
+  & > * {
+    padding-top: 5px;
+  }
+}
+.detail__head {
+  font-weight: normal;
+  vertical-align: top;
+  white-space: nowrap;
+  &:after {
+    content: ":";
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+.detail__data {
+}
+.detail__note {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+/* profile */
+.profile {
+}
+
+
+/* dresscode */
+.dresscode {
+  background-color: $section-color;
 }
 
 
@@ -61,13 +159,16 @@ body {
 /* -------------------------------------
  * footer
 ------------------------------------- */
-#footer {
+.footer {
   clear: both;
   width: 100%;
 }
-#footInner {
-  width: $contentsWidth;
+.footer__inner {
+  width: 100%;
+  max-width: $contents-max-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* copyright */

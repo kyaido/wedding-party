@@ -1,4 +1,21 @@
 @charset "UTF-8";
 
-// contents width
-$contentsWidth: 980px;
+// font-family
+$base-font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$ayuccoro-font-family: "ayuccoro", sans-serif;
+
+
+// font-size
+$base-font-size: 18px;
+$base-line-height: 1.8;
+
+
+// color
+$base-font-color: #212121;
+$base-link-color: #212121;
+
+$section-color: #f8fafa;
+
+
+// contents max width
+$contents-max-width: 980px;

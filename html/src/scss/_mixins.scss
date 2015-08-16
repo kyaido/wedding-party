@@ -2,9 +2,27 @@
 
 
 // mediaquery
-@mixin add-max-query($point) {
-  @media screen and (max-width: $point) { @content; }
+// -------------------------------
+// @usage
+// .hoge {
+//   @include max-screen(mobile) {
+//     // something
+//   }
+// }
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
 }
-@mixin add-min-query($point) {
-  @media screen and (min-width: $point) { @content; }
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
 }
