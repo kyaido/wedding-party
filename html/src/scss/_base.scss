@@ -12,6 +12,9 @@ body {
   font-family: $base-font-family;
   line-height: $base-line-height;
   color: $base-font-color;
+  @include max-screen($break-point-mobile) {
+    font-size: 14px;
+  }
 }
 a {
   color: $base-link-color;

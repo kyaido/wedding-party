@@ -60,6 +60,9 @@ body {
   clear: both;
   width: 100%;
   padding: 60px 0 80px;
+  @include max-screen($break-point-mobile) {
+    padding: 40px 0 60px;
+  }
 }
 .section__inner {
   width: 100%;
@@ -74,6 +77,9 @@ body {
   font-size: 90px;
   text-align: center;
   line-height: 1;
+  @include max-screen($break-point-mobile) {
+    font-size: 60px;
+  }
   &:before,
   &:after {
     content: "";
@@ -83,6 +89,9 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     vertical-align: middle;
+    @include max-screen($break-point-mobile) {
+      display: none;
+    }
   }
   &:before {
     margin-right: 50px;
@@ -97,6 +106,9 @@ body {
   margin-top: 40px;
   text-align: center;
   line-height: 2;
+  @include max-screen($break-point-mobile) {
+    text-align: left;
+  }
 }
 .section__image {
   margin-top: 40px;
@@ -121,6 +133,9 @@ body {
   color: #fff;
   font-size: 22px;
   text-align: center;
+  @include max-screen($break-point-mobile) {
+    font-size: 18px;
+  }
   &--strong {
     max-width: 500px;
     padding: 25px;
@@ -181,9 +196,16 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  @include max-screen($break-point-mobile) {
+    display: block;
+  }
 }
 .profile-box__data {
-  margin-top: 50px;
+  padding-top: 50px;
+  @include max-screen($break-point-mobile) {
+    margin-bottom: 50px;
+    padding-left: 20px;
+  }
   &--bride {
     order: 100;
   }
@@ -193,6 +215,9 @@ body {
   font-family: $ayuccoro-font-family;
   font-size: 60px;
   line-height: 1;
+  @include max-screen($break-point-mobile) {
+    font-size: 50px;
+  }
 }
 .profile-box__flag {
   position: absolute;
@@ -203,11 +228,19 @@ body {
 .profile-box__text {
   margin-top: 10px;
   line-height: 1.5;
+  @include max-screen($break-point-mobile) {
+    font-size: 18px;
+  }
 }
 .profile-box__image {
   min-width: 140px;
   margin: 0 70px 0 50px;
   text-align: center;
+  @include max-screen($break-point-mobile) {
+    margin: 0 auto;
+    max-width: 100px;
+    min-width: 0;
+  }
   img {
     width: 100%;
   }
@@ -220,6 +253,7 @@ body {
 }
 .dresscode__image {
   img {
+    width: 100%;
     max-width: 340px;
   }
 }
@@ -236,6 +270,9 @@ body {
   margin-top: 30px;
   font-size: 22px;
   font-weight: bold;
+  @include max-screen($break-point-mobile) {
+    font-size: 16px;
+  }
 }
 
 
@@ -262,10 +299,13 @@ body {
 .footer__enjoy {
   font-size: 60px;
   line-height: 1;
+  @include max-screen($break-point-mobile) {
+    font-size: 50px;
+  }
 }
 .footer__right {
   display: block;
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
