@@ -16,12 +16,18 @@ body {
 a {
   color: $base-link-color;
   text-decoration: none;
+  transition: opacity .4s;
+}
+a:hover {
+  opacity: .7;
 }
 
 label {
   cursor: pointer;
 }
 img {
+  max-width: 100%;
+  height: auto;
   vertical-align: middle;
 }
 

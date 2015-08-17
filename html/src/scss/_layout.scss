@@ -71,9 +71,27 @@ body {
 .section__heading {
   position: relative;
   font-family: $ayuccoro-font-family;
-  font-size: 80px;
+  font-size: 90px;
   text-align: center;
   line-height: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 116px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: middle;
+  }
+  &:before {
+    margin-right: 50px;
+    background-image: url(../img/svg/ico_garland_left_01.svg);
+  }
+  &:after {
+    margin-left: 50px;
+    background-image: url(../img/svg/ico_garland_right_01.svg);
+  }
 }
 .section__text {
   margin-top: 40px;
@@ -96,18 +114,30 @@ body {
   width: 100%;
   max-width: 400px;
   padding: 15px;
-  background-color: lightgreen;
+  background-color: #5fbca9;
   border-radius: 6px;
   box-sizing: border-box;
   box-shadow: 2px 2px 0 rgba(#000, .3);
   color: #fff;
   font-size: 22px;
   text-align: center;
+  &--strong {
+    max-width: 500px;
+    padding: 25px;
+    background-color: #fff;
+    color: #1e695a;
+  }
 }
+
 
 
 /* greeting */
 .greeting {
+}
+.greeting__image {
+  img {
+    max-width: 240px;
+  }
 }
 
 
@@ -147,11 +177,65 @@ body {
 /* profile */
 .profile {
 }
+.profile-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.profile-box__data {
+  margin-top: 50px;
+  &--bride {
+    order: 100;
+  }
+}
+.profile-box__name {
+  position: relative;
+  font-family: $ayuccoro-font-family;
+  font-size: 60px;
+  line-height: 1;
+}
+.profile-box__flag {
+  position: absolute;
+  top: -35px;
+  left: -20px;
+  width: 80px;
+}
+.profile-box__text {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.profile-box__image {
+  min-width: 140px;
+  margin: 0 70px 0 50px;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
 
 
 /* dresscode */
 .dresscode {
   background-color: $section-color;
+}
+.dresscode__image {
+  img {
+    max-width: 340px;
+  }
+}
+
+
+/* welcome */
+.welcome {
+  background-color: #5fbca9;
+}
+.welcome__heading {
+  color: #fff;
+}
+.welcome__text {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 
@@ -162,6 +246,11 @@ body {
 .footer {
   clear: both;
   width: 100%;
+  padding: 50px 0 30px;
+  background-color: #37404a;
+  font-family: $ayuccoro-font-family;
+  color: #fff;
+  text-align: center;
 }
 .footer__inner {
   width: 100%;
@@ -170,7 +259,13 @@ body {
   padding: 0 20px;
   box-sizing: border-box;
 }
-
-/* copyright */
-.copyright {
+.footer__enjoy {
+  font-size: 60px;
+  line-height: 1;
+}
+.footer__right {
+  display: block;
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
 }
