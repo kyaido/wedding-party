@@ -103,7 +103,7 @@ body {
     right: 100%;
     margin-top: 10px;
     margin-right: 60px;
-    background-image: url(../img/svg/ico_garland_left_01.svg);
+    background-image: url(../img/ico_garland_left_01.svg);
     transform-origin: 100% 50%;
     @include max-screen($break-point-mobile) {
       margin-right: 25px;
@@ -112,7 +112,7 @@ body {
   &:after {
     left: 100%;
     margin-left: 60px;
-    background-image: url(../img/svg/ico_garland_right_01.svg);
+    background-image: url(../img/ico_garland_right_01.svg);
     transform-origin: 0 50%;
     @include max-screen($break-point-mobile) {
       margin-left: 25px;
@@ -148,6 +148,12 @@ body {
   @include max-screen($break-point-mobile) {
     margin-top: 30px;
   }
+  &--strong {
+    margin-top: 30px;
+    @include max-screen($break-point-mobile) {
+      margin-top: 20px;
+    }
+  }
 }
 .button__trigger {
   display: inline-block;
@@ -165,10 +171,15 @@ body {
     font-size: 18px;
   }
   &--strong {
-    max-width: 500px;
-    padding: 25px;
+    max-width: 580px;
+    padding: 30px;
     background-color: #fff;
     color: #1e695a;
+    font-size: 24px;
+    @include max-screen($break-point-mobile) {
+      padding: 15px;
+      font-size: 18px;
+    }
   }
 }
 
@@ -240,12 +251,10 @@ body {
   }
 }
 .profile-box__data {
-  padding-top: 50px;
+  padding: 50px 20px 0;
   @include max-screen($break-point-mobile) {
     display: inline-block;
     margin: 0 15px 30px;
-    padding-left: 20px;
-    padding-right: 20px;
     text-align: left;
   }
   &--bride {
@@ -276,7 +285,7 @@ body {
 }
 .profile-box__image {
   min-width: 140px;
-  margin: 0 70px 0 50px;
+  margin: 0 60px 0 50px;
   text-align: center;
   @include max-screen($break-point-mobile) {
     margin: 30px auto 0;
@@ -310,10 +319,10 @@ body {
 }
 .welcome__heading-text {
   &:before {
-    background-image: url(../img/svg/ico_garland_left_02.svg);
+    background-image: url(../img/ico_garland_left_02.svg);
   }
   &:after {
-    background-image: url(../img/svg/ico_garland_right_02.svg);
+    background-image: url(../img/ico_garland_right_02.svg);
   }
 }
 .welcome__text {
@@ -331,9 +340,10 @@ body {
  * footer
 ------------------------------------- */
 .footer {
+  position: relative;
   clear: both;
   width: 100%;
-  padding: 50px 0 30px;
+  padding: 110px 0 30px;
   background-color: #37404a;
   font-family: $ayuccoro-font-family;
   color: #fff;
@@ -345,6 +355,22 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+.footer__mirrorball {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(#fff, 0);
+    box-shadow: 0 0 10px rgba(#fff, 1);
+  }
 }
 .footer__enjoy {
   font-size: 60px;
