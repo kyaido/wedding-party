@@ -186,6 +186,9 @@ body {
 .detail__note {
   margin-top: 5px;
   font-size: 14px;
+  @include max-screen($break-point-mobile) {
+    font-size: 12px;
+  }
 }
 
 
@@ -198,13 +201,18 @@ body {
   margin-top: 50px;
   @include max-screen($break-point-mobile) {
     display: block;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 .profile-box__data {
   padding-top: 50px;
   @include max-screen($break-point-mobile) {
-    margin-bottom: 50px;
+    display: inline-block;
+    margin: 0 15px 50px;
     padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
   }
   &--bride {
     order: 100;
