@@ -41,7 +41,9 @@
 * ソースになんか仕込む
 * wedding.party.10.17@gmail.com
 * 
-* 
+* IE9でflex
+* IE10でsvgの幅とかがおかしい
+* svgのフォールバックとか
 
 ### google app script
 
