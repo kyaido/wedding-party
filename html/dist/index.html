@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="wrapper">
   
   <header class="header">
     <div class="header__inner">
@@ -20,19 +19,19 @@
       
     <section class="section greeting">
       <div class="section__inner">
-        <h2 class="section__heading">GREETING</h2>
-        <p class="section__text">この度、海道浩介と佐藤あゆみは結婚することとなりました<br>
-        つきましては 日頃お世話になっている皆様に<br>
-        私たちの新しい門出を見守っていただきたく<br>
-        ささやかながらパーティーを催したく存じます<br>
-        ぜひご参加いただければ幸いです！</p>
+        <h2 class="section__heading"><span class="section__heading-text">GREETING</span></h2>
+        <div class="section__text">
+          <p class="section__text-paragraph">この度、海道浩介と佐藤あゆみは結婚することとなりました</p>
+          <p class="section__text-paragraph">つきましては 日頃お世話になっている皆様に<br class="u-mobile-none">私たちの新しい門出を見守っていただきたく<br class="u-mobile-none">ささやかながらパーティーを催したく存じます</p>
+          <p class="section__text-paragraph">ぜひご参加いただければ幸いです！</p>
+        </div>
         <div class="section__image greeting__image"><img src="img/svg/pic_greeting_01.svg" alt=""></div>
       </div>
     </section>
     
     <section class="section invitation">
       <div class="section__inner">
-        <h2 class="section__heading">INVITATION</h2>
+        <h2 class="section__heading"><span class="section__heading-text">INVITATION</span></h2>
         <table class="detail">
           <tr class="detail__row">
             <th class="detail__head">日時</th>
@@ -52,8 +51,7 @@
           </tr>
           <tr class="detail__row">
             <th class="detail__head">場所</th>
-            <td class="detail__data">NOS恵比寿<br>
-            <a href="http://www.nos-ebisu.com/" target="_blank">http://www.nos-ebisu.com/</a>
+            <td class="detail__data"><a href="http://www.nos-ebisu.com/" target="_blank">NOS恵比寿</a><br>
             <p class="detail__note">東京都 渋谷区 恵比寿南 2-3-14 CONZE恵比寿 B1F<br>
               JR「恵比寿」駅西口より徒歩3分<br>
               <a href="http://maps.google.com/maps?q=NOS恵比寿" target="_blank">Google mapで見る</a></p></td>
@@ -65,7 +63,7 @@
     
     <section class="section profile">
       <div class="section__inner">
-        <h2 class="section__heading">PROFILE</h2>
+        <h2 class="section__heading"><span class="section__heading-text">PROFILE</span></h2>
         <div class="profile-box">
           <div class="profile-box__data profile-box__data--groom">
             <p class="profile-box__name">KOSUKE KAIDO <img src="img/svg/ico_profile_01.svg" alt="GROOM" class="profile-box__flag"></p>
@@ -88,7 +86,7 @@
     
     <section class="section dresscode">
       <div class="section__inner">
-        <h2 class="section__heading">DRESS CODE</h2>
+        <h2 class="section__heading"><span class="section__heading-text">DRESS CODE</span></h2>
         <p class="section__text">カジュアルなゆるいパーティーなので<br>
         スーツでもワンピースでもジャケットでも着ぐるみでもOKです！<br>
         部屋着でなければなんでもOKです<br>
@@ -99,7 +97,7 @@
     
     <section class="section welcome">
       <div class="section__inner">
-        <h2 class="section__heading welcome__heading">WELCOME!</h2>
+        <h2 class="section__heading welcome__heading"><span class="section__heading-text welcome__heading-text">WELCOME!</span></h2>
         <p class="section__text welcome__text">みなさまのご参加を心よりお待ちしております！</p>
         <div class="button"><a href="#" class="button__trigger button__trigger--strong">出欠のご登録はこちらから</a></div>
       </div>
@@ -116,8 +114,6 @@
     <!-- /footer -->
   </footer>
   
-  <!-- /wrapper -->
-</div>
 <script src="js/main.js"></script>
 </body>
 </html>

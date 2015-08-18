@@ -7,27 +7,10 @@
 ------------------------------------- */
 
 
-/* text decolation */
-.textNormal    { font-weight: normal !important; }
-.textBold      { font-weight: bold !important; }
-.textUnderline { text-decoration: underline !important; }
-.textItalic    { font-style: italic !important; }
-.textNote      { padding-left: 1em; text-indent: -1em; }
-
-
-/* element position */
-.elementLeft   { text-align: left !important; }
-.elementCenter { text-align: center !important; }
-.elementRight  { text-align: right !important; }
-.elementTop    { vertical-align: top !important; }
-.elementMiddle { vertical-align: middle !important; }
-.elementBottom { vertical-align: bottom !important; }
-
-
-/* font-size */
-@for $i from 10 through 20 {
-  .fs#{$i} {
-    font-size: 1px * $i !important;
+/* mobile none */
+.u-mobile-none {
+  @include max-screen($break-point-mobile) {
+    display: none;
   }
 }
 

@@ -9,9 +9,9 @@
 /* -------------------------------------
  * page
 ------------------------------------- */
+html,
 body {
-}
-.wrapper {
+  height: 100%;
 }
 
 
@@ -22,7 +22,7 @@ body {
 .header {
   clear: both;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 80px 0;
   box-sizing: border-box;
   background: url(../img/pic_header_01.jpg) no-repeat 50% 100% / cover;
@@ -60,6 +60,7 @@ body {
   clear: both;
   width: 100%;
   padding: 60px 0 80px;
+  overflow: hidden;
   @include max-screen($break-point-mobile) {
     padding: 40px 0 60px;
   }
@@ -80,26 +81,42 @@ body {
   @include max-screen($break-point-mobile) {
     font-size: 60px;
   }
+}
+.section__heading-text {
+  position: relative;
   &:before,
   &:after {
     content: "";
-    display: inline-block;
+    position: absolute;
+    top: 50%;
+    display: block;
     width: 116px;
     height: 28px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    vertical-align: middle;
+    transform: translateY(-50%) scale(2);
     @include max-screen($break-point-mobile) {
-      display: none;
+      transform: translateY(-50%) scale(1.5);
     }
   }
   &:before {
-    margin-right: 50px;
+    right: 100%;
+    margin-top: 10px;
+    margin-right: 60px;
     background-image: url(../img/svg/ico_garland_left_01.svg);
+    transform-origin: 100% 50%;
+    @include max-screen($break-point-mobile) {
+      margin-right: 25px;
+    }
   }
   &:after {
-    margin-left: 50px;
+    left: 100%;
+    margin-left: 60px;
     background-image: url(../img/svg/ico_garland_right_01.svg);
+    transform-origin: 0 50%;
+    @include max-screen($break-point-mobile) {
+      margin-left: 25px;
+    }
   }
 }
 .section__text {
@@ -107,7 +124,15 @@ body {
   text-align: center;
   line-height: 2;
   @include max-screen($break-point-mobile) {
+    margin-top: 25px;
     text-align: left;
+  }
+}
+.section__text-paragraph {
+  & + & {
+    @include max-screen($break-point-mobile) {
+      margin-top: 10px;
+    }
   }
 }
 .section__image {
@@ -120,6 +145,9 @@ body {
 .button {
   margin-top: 40px;
   text-align: center;
+  @include max-screen($break-point-mobile) {
+    margin-top: 30px;
+  }
 }
 .button__trigger {
   display: inline-block;
@@ -151,7 +179,10 @@ body {
 }
 .greeting__image {
   img {
-    max-width: 240px;
+    max-width: 220px;
+    @include max-screen($break-point-mobile) {
+      max-width: 160px;
+    }
   }
 }
 
@@ -165,6 +196,9 @@ body {
   width: 100%;
   max-width: 400px;
   margin: 40px auto 0;
+  @include max-screen($break-point-mobile) {
+    margin-top: 25px;
+  }
 }
 .detail__row {
   & > * {
@@ -209,7 +243,7 @@ body {
   padding-top: 50px;
   @include max-screen($break-point-mobile) {
     display: inline-block;
-    margin: 0 15px 50px;
+    margin: 0 15px 30px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: left;
@@ -245,7 +279,7 @@ body {
   margin: 0 70px 0 50px;
   text-align: center;
   @include max-screen($break-point-mobile) {
-    margin: 0 auto;
+    margin: 30px auto 0;
     max-width: 100px;
     min-width: 0;
   }
@@ -273,6 +307,14 @@ body {
 }
 .welcome__heading {
   color: #fff;
+}
+.welcome__heading-text {
+  &:before {
+    background-image: url(../img/svg/ico_garland_left_02.svg);
+  }
+  &:after {
+    background-image: url(../img/svg/ico_garland_right_02.svg);
+  }
 }
 .welcome__text {
   margin-top: 30px;
