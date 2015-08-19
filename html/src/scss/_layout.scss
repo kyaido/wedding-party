@@ -190,6 +190,7 @@ body {
 }
 .greeting__image {
   img {
+    width: 100%;
     max-width: 220px;
     @include max-screen($break-point-mobile) {
       max-width: 160px;
@@ -294,6 +295,7 @@ body {
   }
   img {
     width: 100%;
+    max-width: 140px;
   }
 }
 
