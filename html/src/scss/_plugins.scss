@@ -5,3 +5,9 @@
  * plugins
  *
 ------------------------------------- */
+// override backstretch style
+.backstretch,
+.backstretch img {
+  top: auto !important;
+  bottom: 0 !important;
+}

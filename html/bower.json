@@ -1,0 +1,8 @@
+{
+  "name": "my-project-name",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-backstretch": "~2.0.4"
+  }
+}
