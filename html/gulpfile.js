@@ -31,17 +31,17 @@ gulp.task('sass', function() {
 
 
 /* js task */
-gulp.task('js', function() {
-  return browserify({
-    entries: ['src/js/main.js']
-  })
-  .bundle()
-  .pipe(plumber())
-  .pipe(source('main.js'))
-  .pipe(buffer())
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('js', function() {
+//   return browserify({
+//     entries: ['src/js/main.js']
+//   })
+//   .bundle()
+//   .pipe(plumber())
+//   .pipe(source('main.js'))
+//   .pipe(buffer())
+//   .pipe(uglify())
+//   .pipe(gulp.dest('dist/js'));
+// });
 
 
 /* webserver task */
@@ -60,7 +60,7 @@ gulp.task('webserver', function() {
 /* watch task */
 gulp.task('watch', function() {
   gulp.watch(['src/scss/**/*.scss'], ['sass']);
-  gulp.watch(['src/js/**/*.js'], ['js']);
+  // gulp.watch(['src/js/**/*.js'], ['js']);
 });
 
 

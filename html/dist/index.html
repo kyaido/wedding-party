@@ -8,7 +8,7 @@
 </head>
 <body>
   
-  <header class="header">
+  <header class="header js-backstretch">
     <div class="header__inner">
       <h1 class="logo"><img src="img/txt_header_01.svg" alt="KOSUKE &amp; AYUMI Wedding Party 2015.10.17.SAT"></h1>
     </div>
@@ -115,6 +115,20 @@
     <!-- /footer -->
   </footer>
   
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script>
+$(function() {
+  $('.js-backstretch').backstretch([
+    'img/pic_header_01.jpg',
+    'img/pic_header_02.jpg',
+    'img/pic_header_03.jpg',
+    'img/pic_header_04.jpg',
+    'img/pic_header_05.jpg',
+    'img/pic_header_06.jpg',
+  ], {duration: 4000, fade: 1000});
+})
+</script>
 </body>
 </html>
