@@ -126,12 +126,34 @@ body {
   @include max-screen($break-point-mobile) {
     margin-top: 25px;
     text-align: left;
+    line-height: 1.8;
   }
 }
 .section__text-paragraph {
   & + & {
     @include max-screen($break-point-mobile) {
       margin-top: 10px;
+    }
+  }
+}
+.section__text-strong {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  margin: 0 10px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    left: -2px;
+    z-index: -1;
+    width: 100%;
+    width: calc(100% + 4px);
+    height: 7px;
+    background-color: #d7d736;
+    @include max-screen($break-point-mobile) {
+      bottom: 9px;
+      height: 5px;
     }
   }
 }
@@ -156,6 +178,7 @@ body {
   }
 }
 .button__trigger {
+  position: relative;
   display: inline-block;
   width: 100%;
   max-width: 400px;
@@ -163,10 +186,11 @@ body {
   background-color: #5fbca9;
   border-radius: 6px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 0 rgba(#000, .3);
+  box-shadow: 2px 2px 0 rgba(#000, .2);
   color: #fff;
   font-size: 22px;
   text-align: center;
+  transition: none;
   @include max-screen($break-point-mobile) {
     font-size: 18px;
   }
@@ -179,6 +203,14 @@ body {
     @include max-screen($break-point-mobile) {
       padding: 15px;
       font-size: 18px;
+    }
+  }
+  &:hover {
+    opacity: 1;
+    @include min-screen($break-point-mobile) {
+      top: -2px;
+      left: -2px;
+      box-shadow: 4px 4px 0 rgba(#000, .2);
     }
   }
 }
@@ -234,6 +266,23 @@ body {
   font-size: 14px;
   @include max-screen($break-point-mobile) {
     font-size: 12px;
+  }
+}
+.detail__link {
+  position: relative;
+  margin-top: 5px;
+  display: inline-block;
+  padding-left: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: .5em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-top: $base-link-color 1px solid;
+    border-right: $base-link-color 1px solid;
+    transform: rotate(45deg);
   }
 }
 
