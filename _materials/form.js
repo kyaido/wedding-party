@@ -38,21 +38,16 @@ function submitForm(e){
   GmailApp.sendEmail(address, title, content);
   
   // 回答者用メール送信
-  var title2 = '【自動返信】海道・佐藤ウェディングパーティ';
+  var title2 = '【自動返信】海道・佐藤ウェディングパーティー';
   var content2 = username + '様\n'
                  + '\n'
                  + '出欠登録ありがとうございます！\n'
-                 + '出欠の変更などありましたら、お気軽に新郎・新婦までご連絡くださいませ\n'
+                 + '出欠の変更などありましたら、お気軽に海道・佐藤までご連絡くださいませ\n'
                  + '\n'
                  + 'お名前：' + username + '\n'
                  + '出欠：'   + attendance + '\n'
                  + '\n'
-                 + '▼パーティ詳細はこちらをご覧ください\n'
-                 + 'https://xxx\n';
+                 + '▼パーティー詳細はこちらをご覧ください\n'
+                 + 'https://kyaido.github.io/wedding-party/\n';
   GmailApp.sendEmail(mail, title2, content2, { from: 'wedding.party.10.17@gmail.com' });
 }
-
-// TODO
-// 送信用メールアドレスを取得
-// 送信者の名前を設定したい→専用のアドレスとれば別にいいかも
-// 出席か欠席かで内容わける？
