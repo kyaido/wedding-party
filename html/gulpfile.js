@@ -16,7 +16,7 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 gulp.task('deploy', function() {
-  return gulp.src('./html/dist/**/*')
+  return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
 
