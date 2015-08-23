@@ -9,10 +9,16 @@ var source       = require('vinyl-source-stream');
 var browserify   = require('browserify');
 var buffer       = require('vinyl-buffer');
 var uglify       = require('gulp-uglify');
+var ghPages      = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
   'last 2 version', 'Explorer >= 9', 'Android >= 2.3'
 ];
+
+gulp.task('deploy', function() {
+  return gulp.src('./html/dist/**/*')
+    .pipe(ghPages());
+});
 
 /* sass task */
 gulp.task('sass', function() {
