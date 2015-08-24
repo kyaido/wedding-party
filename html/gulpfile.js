@@ -15,10 +15,6 @@ var AUTOPREFIXER_BROWSERS = [
   'last 2 version', 'Explorer >= 9', 'Android >= 2.3'
 ];
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
 
 /* sass task */
 gulp.task('sass', function() {
@@ -67,6 +63,13 @@ gulp.task('webserver', function() {
 gulp.task('watch', function() {
   gulp.watch(['src/scss/**/*.scss'], ['sass']);
   gulp.watch(['src/js/**/*.js'], ['js']);
+});
+
+
+/* deploy task */
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 
