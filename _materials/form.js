@@ -22,10 +22,10 @@ function submitForm(e){
     if (question === '性別'){
       sex = answer;
     }
-    if (question === 'メールアドレス') {
+    if (question === 'メールアドレス（任意）') {
       mail = answer;
     }
-    if (question === 'メッセージ'){
+    if (question === 'メッセージ（任意）'){
       message = answer;
     }
     content += question + '：' + answer + '\n';
@@ -38,16 +38,22 @@ function submitForm(e){
   GmailApp.sendEmail(address, title, content);
   
   // 回答者用メール送信
-  var title2 = '【自動返信】海道・佐藤ウェディングパーティー';
-  var content2 = username + '様\n'
-                 + '\n'
-                 + '出欠登録ありがとうございます！\n'
-                 + '出欠の変更などありましたら、お気軽に海道・佐藤までご連絡くださいませ\n'
-                 + '\n'
-                 + 'お名前：' + username + '\n'
-                 + '出欠：'   + attendance + '\n'
-                 + '\n'
-                 + '▼パーティー詳細はこちらをご覧ください\n'
-                 + 'https://kyaido.github.io/wedding-party/\n';
-  GmailApp.sendEmail(mail, title2, content2, { from: 'wedding.party.10.17@gmail.com' });
+  if(mail !== '') {
+    var title2 = '【自動返信】海道・佐藤ウェディングパーティー';
+    var content2 = username + '様\n'
+                   + '\n'
+                   + '出欠登録ありがとうございます！\n'
+                   + '出欠の変更などありましたら、お気軽に海道・佐藤までご連絡ください！\n'
+                   + '\n'
+                   + 'お名前：' + username + '\n'
+                   + '出欠：'   + attendance + '\n'
+                   + '\n'
+                   + '▼パーティー詳細はこちらをご覧ください\n'
+                   + 'https://kyaido.github.io/wedding-party/\n'
+                   + '\n'
+                   + 'よろしくお願いします◎\n'
+                   + '\n'
+                   + '浩介＆あゆみ\n';
+    GmailApp.sendEmail(mail, title2, content2, { from: 'wedding.party.10.17@gmail.com' });
+  }
 }
