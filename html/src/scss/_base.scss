@@ -22,7 +22,9 @@ a {
   transition: opacity .4s;
 }
 a:hover {
-  opacity: .7;
+  @include min-screen($break-point-mobile) {
+    opacity: .7;
+  }
 }
 
 img {
