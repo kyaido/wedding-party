@@ -194,6 +194,9 @@ body {
   @include max-screen($break-point-mobile) {
     font-size: 18px;
   }
+  &.is-disabled {
+    text-decoration: line-through;
+  }
   &--strong {
     max-width: 580px;
     padding: 30px;
