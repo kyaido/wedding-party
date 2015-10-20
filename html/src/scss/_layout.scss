@@ -208,7 +208,7 @@ body {
       font-size: 18px;
     }
   }
-  &:hover {
+  &:hover:not(.is-disabled) {
     @include min-screen($break-point-mobile) {
       opacity: 1;
       top: -2px;
